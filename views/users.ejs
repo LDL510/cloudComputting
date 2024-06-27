@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>You have just logged in!</p>
+    <div class="btn-group">
+      <a href="/cart" class="btn btn-primary">Cart</a>
+      <a href="/products/add" class="btn btn-success">Add </a>
+    </div>
+    <!-- transfer the products_table from users router-->
+     <%- products_table %>
+  </body>
+</html>
