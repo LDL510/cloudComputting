@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>You have just product in!</p>
+    <form action="/products" method="post" enctype="multipart/form-data" style="display: flex; flex-direction: column; width: 100%;gap: 10px; justify-items: center;">
+        <input type="text" placeholder="Enter Product Name" name="name" required>
+        <input type="text" placeholder="Enter Product Price" name="price" required>
+        <input type="text" placeholder="Enter Product Quantity" name="quantity" required>
+        <input type="text" placeholder="Enter Product Description" name="description" required>
+        <input type="file" id="img" name="image" accept="image/*">
+        <button type="submit" >Add Product</button>
+    </form>
+  </body>
+</html>

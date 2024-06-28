@@ -2,17 +2,39 @@
 <html>
   <head>
     <title><%= title %></title>
-
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script>
+      // Auto-refresh the page every 60 seconds
+      document.addEventListener('DOMContentLoaded', function() {
+        setInterval(function() {
+          window.location.reload();
+        }, 60000);
+      });
+    </script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <p>You have just logged in!</p>
-    <div class="btn-group">
-      <a href="/cart" class="btn btn-primary">Cart</a>
-      <a href="/products/add" class="btn btn-success">Add </a>
-    </div>
-    <!-- transfer the products_table from users router-->
-     <%- products_table %>
+    <header>
+      <h1><%= title %></h1>
+      <nav>
+        <ul>
+          <li><a href="/products" class="btn btn-success">Add Product</a></li>
+          <li>
+            <form action="/users/logout" method="post">
+              <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Welcome back!</h2>
+        <p>You have just logged in.</p>
+        <%- products_table %> 
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 <%= title %></p>
+    </footer>
   </body>
 </html>

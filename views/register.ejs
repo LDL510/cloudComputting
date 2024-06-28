@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form action="/users/register" method="post">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+      </br>
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Your Password" name="password" required>
+      </br>
+      <select id="role" name="role" style="margin-bottom: 10px;">
+        <option value="1">Admin</option>
+        <option value="2">Shop Owner</option>
+        <option value="3">User</option>
+      </select>
+    </br>
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>

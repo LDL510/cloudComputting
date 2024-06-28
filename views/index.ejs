@@ -2,11 +2,26 @@
 <html>
   <head>
     <title><%= title %></title>
-
+    <link rel="stylesheet" href="/stylesheets/style.css"> <!-- Thêm link tới file CSS -->
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href="/users">Please Login at here</a>
+    <header>
+      <h1><%= title %></h1>
+      <nav>
+        <ul>
+          <li><a href="/users">Login</a></li>
+          <li><a href="/users/register">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Welcome to <%= title %></h2>
+        <p>Please log in or register to access our services.</p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 <%= title %></p>
+    </footer>
   </body>
 </html>
